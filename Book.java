@@ -14,12 +14,13 @@ class Book
     private int pages;
     private String refNumber;
     private int bookBorrowed;
+    private String courseText;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle, int bookPages, String bookrefNumber, int bookBorrowed)
+    public Book(String bookAuthor, String bookTitle, int bookPages, String bookrefNumber, int bookBorrowed, String courseText)
     {
         author = bookAuthor;
         title = bookTitle;
@@ -64,6 +65,7 @@ class Book
        System.out.println ("Author: " + author);
        System.out.println ("Pages: " + pages);
        System.out.println ("Reference Number: " + refNumber);
+       System.out.println ("Times Borrowed: " + bookBorrowed);
     }
     
     // Book Problem # 2.87
@@ -72,7 +74,7 @@ class Book
     {
     refNumber = ref;
 if (ref.length() < 3) {
-    System.out.println("Reference number must have at least 3 characters.");
+    System.out.println("Your reference number must have at least 3 characters, thank you.");
 }
 else {       
  refNumber = ref;
@@ -87,11 +89,43 @@ else {
     
     //Book Problem #2.89 *** Added the error message conditional to the setRefNumber Method. (Lines 72 - 77)
     
-    //Book Problem #2.90 *** Added the borrowed int, its mutator and accessor and modified the print details method. 
+    //Book Problem #2.90 *** Added the borrowed int, its mutator, setter, accessor and modified the print details method. 
     
+    public int bookBorrowed ()
+    {
+        bookBorrowed = bookBorrowed + 1;
+        return bookBorrowed + 1;
+    }
     
+    public int getbookBorrowed ()
+    {
+        return bookBorrowed;
+    }
     
+    public int setbookBorrowed (int bookBorrowed)
+    {
+        bookBorrowed = bookBorrowed;
+        return bookBorrowed;
+    }
     
+    //Book Problem # 2.91  ( I ran into trouble with this last question and didn't have enough time to keep working on it, this was as far as I got.
+    //Everything else compiles if you delete what I added below these comments.
+    
+    public String setcourseText (String courseText)
+    {
+    if (courseText() = "yes") {
+        System.out.println("This is a course textbook");
+    if (courseText.string() = "no")
+      System.out.println("This is not a course textbook");
+    }
+    else {
+        courseText = courseText;
+    }
+}
+    public String getcourseText ()
+    {
+        return courseText;
+    }
     
     
 }
