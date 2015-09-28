@@ -12,16 +12,19 @@ class Book
     private String author;
     private String title;
     private int pages;
+    private String refNumber;
+    private int bookBorrowed;
 
     /**
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle, int bookPages)
+    public Book(String bookAuthor, String bookTitle, int bookPages, String bookrefNumber, int bookBorrowed)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
+        refNumber = bookrefNumber;
     }
 // Book Problem # 2.83
     public String getAuthor ()
@@ -60,9 +63,35 @@ class Book
        System.out.println ("Title: " + title);
        System.out.println ("Author: " + author);
        System.out.println ("Pages: " + pages);
+       System.out.println ("Reference Number: " + refNumber);
     }
     
     // Book Problem # 2.87
+    
+    public void setRefNumber(String ref)
+    {
+    refNumber = ref;
+if (ref.length() < 3) {
+    System.out.println("Reference number must have at least 3 characters.");
+}
+else {       
+ refNumber = ref;
+}
+    }
+        public String getrefNumber ()
+    {
+        return refNumber;
+    }
+    
+    //Book Problem # 2.88 *** Added reference number to the print details method above. (Line 65)
+    
+    //Book Problem #2.89 *** Added the error message conditional to the setRefNumber Method. (Lines 72 - 77)
+    
+    //Book Problem #2.90 *** Added the borrowed int, its mutator and accessor and modified the print details method. 
+    
+    
+    
+    
     
     
 }
